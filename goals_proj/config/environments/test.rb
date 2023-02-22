@@ -7,7 +7,7 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
 
-  config.system_testing.driver = :rack_test
+  # config.system_testing.driver = :rack_test
 
   # Settings specified here will take precedence over those in config/application.rb.
 
