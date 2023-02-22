@@ -6,10 +6,14 @@ require "active_support/core_ext/integer/time"
 # and recreated between test runs. Don't rely on the data there!
 
 Rails.application.configure do
+
+  config.system_testing.driver = :rack_test
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Turn false under Spring and add config.action_view.cache_template_loading = true.
-  config.cache_classes = true
+  config.cache_classes = false
+  config.action_view.cache_template_loading = true
 
   # Eager loading loads your whole application. When running a single test locally,
   # this probably isn't necessary. It's a good idea to do in a continuous integration
